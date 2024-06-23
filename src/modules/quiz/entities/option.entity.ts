@@ -13,6 +13,12 @@ export class Option extends BaseEntity{
     @Column({type: 'boolean',default: 1})
     isCorrect: boolean;
 
+    @Column()
+    createdAt: Date;
+    
+    @Column()
+    updatedAt: Date;
+
     @ManyToOne(() => Question, (question) => question.option)
     questions: Question
 }

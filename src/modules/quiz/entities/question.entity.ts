@@ -13,6 +13,9 @@ export class Question extends BaseEntity{
     })
     question: string;
 
+    @Column()
+    createdAt: Date;
+
     @ManyToOne(() => Quiz, (quiz) => quiz.questions)
     quiz: Quiz;
     
